@@ -1,0 +1,8 @@
+version: '3'
+services:
+  docker-compose-app:
+    build:
+      context: .
+      dockerfile: node.Dockerfile
+    ports:
+      - 3001:3000
