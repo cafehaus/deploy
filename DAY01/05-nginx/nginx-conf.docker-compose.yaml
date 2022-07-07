@@ -1,0 +1,13 @@
+# 通过 volumes 和 nginx.conf 来跑起来咱的示例
+# docker-compose -f nginx-conf.docker-compose.yaml up nginx-conf-app
+
+version: '3'
+services:
+  nginx-conf-app:
+    image: nginx:alpine
+    ports:
+      # docker 里的端口要是 80，因为 nginx 里默认的配置就是监听的 80 端口
+      - 4124:80
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - .:/usr/share/nginx/html

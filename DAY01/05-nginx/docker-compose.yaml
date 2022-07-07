@@ -5,4 +5,5 @@ services:
       context: .
       dockerfile: nginx.Dockerfile
     ports:
-      - 4000:3000
+      # docker 里的端口要是 80，因为 nginx 里默认的配置就是监听的 80 端口
+      - 4000:80

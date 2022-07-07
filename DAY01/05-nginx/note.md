@@ -28,4 +28,10 @@ server {
         root   /usr/share/nginx/html;
     }
 }
+
+# nginx.Dockerfile 将当前目录下的 index.html 添加到 nginx 的静态资源目录下
+# 再运行配置 docker-compose.yaml 文件就就可以访问咱自己的 index.html
+# docker-compose up --build
+
+# 配置文件 .yaml 和 .yml 格式结尾都可以，官方推荐 .yaml
 ```
