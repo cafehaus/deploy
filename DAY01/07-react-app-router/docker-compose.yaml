@@ -1,0 +1,8 @@
+version: '3'
+services:
+  react-app:
+    build:
+      context: .
+      dockerfile: app.Dockerfile
+    ports:
+      - 4007:80
